@@ -10,4 +10,6 @@
 
 * tests
 
+* history of passing tests by users
+
 * ...
