@@ -1,5 +1,5 @@
 module TestGuru
-  class Aplication
-    VERSION = '1.0'
+  class Application
+    VERSION = '0.1.0'
   end
 end
