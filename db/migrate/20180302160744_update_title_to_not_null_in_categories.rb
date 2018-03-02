@@ -1,5 +1,5 @@
 class UpdateTitleToNotNullInCategories < ActiveRecord::Migration[5.1]
   def change
-    change_column_null(:categories, :title, true)
+    change_column_null(:categories, :title, false)
   end
 end
