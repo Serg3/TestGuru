@@ -47,3 +47,11 @@ answers = Answer.create([
   { body: "'HTML' is the standard markup language for creating web pages and web applications.", correct: true, question_id: questions[4].id },
   { body: "'HTML' is an object oriented language.", correct: false, question_id: questions[4].id }
 ])
+
+tests = PassedTest.create([
+  { status: 'Complete', user_id: users[0].id, test_id: tests[4].id },
+  { status: 'In progress', user_id: users[0].id, test_id: tests[0].id },
+  { status: 'Complete', user_id: users[1].id, test_id: tests[2].id },
+  { status: 'In progress', user_id: users[1].id, test_id: tests[3].id },
+  { status: 'In progress', user_id: users[2].id, test_id: tests[0].id },
+])
