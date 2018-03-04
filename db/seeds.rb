@@ -6,37 +6,44 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.create(title: 'beginner')
-Category.create(title: 'intermediate')
-Category.create(title: 'advanced')
+categories = Category.create([
+  { title: 'beginner' },
+  { title: 'intermediate' },
+  { title: 'advanced' }
+])
 
-User.create(name: 'John')
-User.create(name: 'Mike')
-User.create(name: 'Jane')
-User.create(name: 'Lisa')
+users = User.create([
+  { name: 'John' },
+  { name: 'Mike' },
+  { name: 'Jane' },
+  { name: 'Lisa' }
+])
 
-Test.create(title: 'Ruby', category_id: 1, level: 0)
-Test.create(title: 'Ruby', category_id: 2, level: 1)
-Test.create(title: 'Rails', category_id: 2, level: 1)
-Test.create(title: 'Rails', category_id: 3, level: 2)
-Test.create(title: 'HTML', category_id: 1, level: 0)
+tests = Test.create([
+  { title: 'Ruby', level: 0, category_id: categories[0].id },
+  { title: 'Ruby', level: 1, category_id: categories[1].id },
+  { title: 'Rails', level: 1, category_id: categories[1].id },
+  { title: 'Rails', level: 2, category_id: categories[2].id },
+  { title: 'HTML', level: 0, category_id: categories[0].id }
+])
 
-Question.create(body: "What is 'Ruby'?", test_id: 1)
-Answer.create(body: "'Ruby' is a interpreted language.", question_id: 1, correct: true)
-Answer.create(body: "'Ruby' is a compiled language.", question_id: 1, correct: false)
+questions = Question.create([
+  { body: "What is 'Ruby'?", test_id: tests[0].id },
+  { body: "What is base class in 'Ruby'?", test_id: tests[1].id },
+  { body: "What is 'Rails'?", test_id: tests[2].id },
+  { body: "What is 'ActiveRecord'?", test_id: tests[3].id },
+  { body: "What is 'HTML'?", test_id: tests[4].id }
+])
 
-Question.create(body: "What is base class in 'Ruby'?", test_id: 2)
-Answer.create(body: "'BasicObject'.", question_id: 2, correct: true)
-Answer.create(body: "'Object'.", question_id: 2, correct: false)
-
-Question.create(body: "What is 'Rails'?", test_id: 3)
-Answer.create(body: "'Rails' is a framework.", question_id: 3, correct: true)
-Answer.create(body: "'Rails' is a cloud servise.", question_id: 3, correct: false)
-
-Question.create(body: "What is 'ActiveRecord'?", test_id: 4)
-Answer.create(body: "'Active Record' is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic.", question_id: 4, correct: true)
-Answer.create(body: "'Active Record' is an architectural pattern found in software that stores in-memory object data in relational databases.", question_id: 4, correct: false)
-
-Question.create(body: "What is 'HTML'?", test_id: 5)
-Answer.create(body: "'HTML' is the standard markup language for creating web pages and web applications.", question_id: 5, correct: true)
-Answer.create(body: "'HTML' is an object oriented language.", question_id: 5, correct: false)
+answers = Answer.create([
+  { body: "'Ruby' is a interpreted language.", correct: true, question_id: questions[0].id },
+  { body: "'Ruby' is a compiled language.", correct: false, question_id: questions[0].id },
+  { body: "'BasicObject'.", correct: true, question_id: questions[1].id },
+  { body: "'Object'.", correct: false, question_id: questions[1].id },
+  { body: "'Rails' is a framework.", correct: true, question_id: questions[2].id },
+  { body: "'Rails' is a cloud servise.", correct: false, question_id: questions[2].id },
+  { body: "'Active Record' is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic.", correct: true, question_id: questions[3].id },
+  { body: "'Active Record' is an architectural pattern found in software that stores in-memory object data in relational databases.", correct: false, question_id: questions[3].id },
+  { body: "'HTML' is the standard markup language for creating web pages and web applications.", correct: true, question_id: questions[4].id },
+  { body: "'HTML' is an object oriented language.", correct: false, question_id: questions[4].id }
+])
