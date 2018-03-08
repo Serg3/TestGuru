@@ -19,17 +19,17 @@ users = User.create([
   { name: 'Lisa' }
 ])
 
-authors = Author.create([
-  { user_id: users.fetch(1).id },
-  { user_id: users.fetch(3).id }
-])
+# authors = Author.create([
+#   { user_id: users.fetch(1).id },
+#   { user_id: users.fetch(3).id }
+# ])
 
 tests = Test.create([
-  { title: 'Ruby', level: 0, category_id: categories.fetch(0).id, author_id: authors.fetch(0).id },
-  { title: 'Ruby', level: 1, category_id: categories.fetch(1).id, author_id: authors.fetch(0).id },
-  { title: 'Rails', level: 1, category_id: categories.fetch(1).id, author_id: authors.fetch(1).id },
-  { title: 'Rails', level: 2, category_id: categories.fetch(2).id, author_id: authors.fetch(1).id },
-  { title: 'HTML', level: 0, category_id: categories.fetch(0).id, author_id: authors.fetch(0).id }
+  { title: 'Ruby', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id },
+  { title: 'Ruby', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(0).id },
+  { title: 'Rails', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(1).id },
+  { title: 'Rails', level: 2, category_id: categories.fetch(2).id, author_id: users.fetch(1).id },
+  { title: 'HTML', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id }
 ])
 
 questions = Question.create([
