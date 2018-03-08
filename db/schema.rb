@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305163535) do
+ActiveRecord::Schema.define(version: 20180308145726) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20180305163535) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "level", default: 0, null: false
+    t.integer "author_id"
+    t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
