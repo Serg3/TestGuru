@@ -19,11 +19,6 @@ users = User.create([
   { name: 'Lisa' }
 ])
 
-# authors = Author.create([
-#   { user_id: users.fetch(1).id },
-#   { user_id: users.fetch(3).id }
-# ])
-
 tests = Test.create([
   { title: 'Ruby', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id },
   { title: 'Ruby', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(0).id },
