@@ -13,16 +13,11 @@ categories = Category.create([
 ])
 
 users = User.create([
-  { name: 'John' },
-  { name: 'Mike' },
-  { name: 'Jane' },
-  { name: 'Lisa' }
+  { name: 'John', email: 'john@example.com' },
+  { name: 'Mike', email: 'mike@example.com' },
+  { name: 'Jane', email: 'jane@example.com' },
+  { name: 'Lisa', email: 'lisa@example.com' }
 ])
-
-# authors = Author.create([
-#   { user_id: users.fetch(1).id },
-#   { user_id: users.fetch(3).id }
-# ])
 
 tests = Test.create([
   { title: 'Ruby', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id },
