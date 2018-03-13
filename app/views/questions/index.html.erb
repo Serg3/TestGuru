@@ -1,0 +1,4 @@
+<h1>Test №<%= @test.id %></h1>
+<% @test.questions.each do |question| %>
+  <p><%= question.body %></p>
+<% end %>

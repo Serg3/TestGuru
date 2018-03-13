@@ -1,0 +1,8 @@
+  <h1>Question №<%= @question.id %>. <%= @question.body %></h1>
+  <% @answers.each do |answer| %>
+    <p><%= @answers.index(answer) + 1 %>. <%= answer.body %></p>
+  <% end %>
+
+  <p><%= link_to 'Delete question', @question,
+                                    method: :delete,
+                                    data: { confirm: "You sure?" } %></p>
