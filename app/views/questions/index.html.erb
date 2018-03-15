@@ -1,4 +1,14 @@
-<h1>Test №<%= @test.id %></h1>
-<% @test.questions.each do |question| %>
-  <p><%= question.body %></p>
-<% end %>
+<h1>Test <%= @test.title %></h1>
+
+<p>
+  <%= link_to 'New question', new_test_question_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+  <%= render @questions %>
+</table>

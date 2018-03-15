@@ -3,6 +3,5 @@
     <p><%= index %>. <%= answer.body %></p>
   <% end %>
 
-  <p><%= link_to 'Delete question', @question,
-                                    method: :delete,
-                                    data: { confirm: "You sure?" } %></p>
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', @question %>
