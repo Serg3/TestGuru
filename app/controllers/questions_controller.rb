@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    @question = @test.questions.build(question_params)
+    @question.update_attributes(question_params)
     if @question.save
       redirect_to @question
     else
