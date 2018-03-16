@@ -30,8 +30,7 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    @question.update_attributes(question_params)
-    if @question.save
+    if @question.update_attributes(question_params)
       redirect_to @question
     else
       render :new

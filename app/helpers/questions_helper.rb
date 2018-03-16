@@ -1,9 +1,9 @@
 module QuestionsHelper
-  def question_header(test, method)
-    title = if method == :new
-              "<h1>Create New #{test.title} Question</h1>"
-            elsif method == :edit
-              "<h1>Edit #{test.title} Question</h1>"
+  def question_header(resource)
+    title = if resource.new_record?
+              "<h1>Create New #{resource.test.title} Question</h1>"
+            else
+              "<h1>Edit #{resource.test.title} Question</h1>"
             end
     title.html_safe
   end
