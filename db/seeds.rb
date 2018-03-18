@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 categories = Category.create([
-  { title: 'beginner' },
-  { title: 'intermediate' },
-  { title: 'advanced' }
+  { title: 'front-end' },
+  { title: 'back-end' },
+  { title: 'full-stack' }
 ])
 
 users = User.create([

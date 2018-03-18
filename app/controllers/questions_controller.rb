@@ -29,7 +29,7 @@ class QuestionsController < ApplicationController
     if @question.update_attributes(question_params)
       redirect_to @question
     else
-      render :new
+      render :edit
     end
   end
 
