@@ -1,7 +1,15 @@
   <h1>Test №<%= @test.id %>. <%= @test.title %></h1>
-  <% @questions.each.with_index(1) do |question, index| %>
-    <p><%= index %>. <%= question.body %></p>
-  <% end %>
 
-<%= link_to 'Edit', edit_test_path(@test) %> |
-<%= link_to 'Back', tests_path %>
+  <table>
+    <tr>
+      <th>Body</th>
+      <th colspan="3">Actions</th>
+    </tr>
+
+    <%= render @questions %>
+  </table>
+
+<p>
+  <%= link_to 'Edit', edit_test_path(@test) %> |
+  <%= link_to 'Back', tests_path %>
+</p>
