@@ -5,10 +5,6 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  # def index
-  #   @questions = @test.questions
-  # end
-
   def show
     @answers = @question.answers
   end
@@ -39,7 +35,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to tests_path
+    redirect_to @question.test
   end
 
   private
