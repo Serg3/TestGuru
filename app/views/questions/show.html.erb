@@ -1,10 +1,14 @@
-  <h1>Question №<%= @question.id %>. <%= @question.body %></h1>
+<h1><%= @question.test.title %> Question</h1>
 
-  <ol>
-    <% @answers.each do |answer| %>
-      <li><%= answer.body %></li>
-    <% end %>
-  </ol>
+<p><%= @question.body %></p>
+
+<h2>Answers:</h2>
+
+<%= link_to 'New Answer', new_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', @question.test %>
