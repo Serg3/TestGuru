@@ -5,10 +5,6 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  # def index
-  #   @questions = @test.questions
-  # end
-
   def show
     @answers = @question.answers
   end
@@ -33,30 +29,30 @@ class QuestionsController < ApplicationController
     if @question.update_attributes(question_params)
       redirect_to @question
     else
-      render :new
+      render :edit
     end
   end
 
   def destroy
     @question.destroy
-    redirect_to tests_path
+    redirect_to @question.test
   end
 
   private
 
-    def question_params
-      params.require(:question).permit(:body)
-    end
+  def question_params
+    params.require(:question).permit(:body)
+  end
 
-    def find_test
-      @test = Test.find(params[:test_id])
-    end
+  def find_test
+    @test = Test.find(params[:test_id])
+  end
 
-    def find_question
-      @question = Question.find(params[:id])
-    end
+  def find_question
+    @question = Question.find(params[:id])
+  end
 
-    def rescue_with_question_not_found
-      render html: '<h1>Question not found!</h1>'.html_safe
-    end
+  def rescue_with_question_not_found
+    render html: '<h1>Question not found!</h1>'.html_safe
+  end
 end
