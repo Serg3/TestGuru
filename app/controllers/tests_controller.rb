@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_test, only: [:show, :edit, :update, :destroy, :start]
-  before_action :set_user, only: :start
 
   def index
     @tests = Test.all
@@ -42,8 +42,8 @@ class TestsController < ApplicationController
 
   def start
     #@user.tests.push(@test)
-    TestPassage.create(user_id: @user.id, test_id: @test.id, status: 'In progress')
-    redirect_to @user.test_passage(@test)
+    TestPassage.create(user_id: current_user.id, test_id: @test.id, status: 'In progress')
+    redirect_to current_user.test_passage(@test)
   end
 
   private
@@ -54,9 +54,5 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def set_user
-    @user = User.last
   end
 end
