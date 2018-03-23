@@ -14,4 +14,8 @@ module ApplicationHelper
       content_tag('h1', "Edit #{resource.class} №#{resource.id}")
     end
   end
+
+  def flash_message(action)
+    content_tag :p, flash[action], class: "flash #{action.to_s}"
+  end
 end
