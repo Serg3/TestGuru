@@ -10,8 +10,10 @@
 
   <body>
     <%= render 'shared/header' %>
-    <%= flash_message(:alert) %>
-    
+    <% flash.each do |action, message| %>
+      <%= flash_message(action) %>
+    <% end %>
+
     <%= yield %>
 
     <%= render 'shared/footer' %>

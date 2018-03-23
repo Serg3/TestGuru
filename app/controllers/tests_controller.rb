@@ -41,8 +41,6 @@ class TestsController < ApplicationController
   end
 
   def start
-    #@user.tests.push(@test)
-    #TestPassage.create(user_id: current_user.id, test_id: @test.id, status: 'In progress')
     current_user.test_passages.create(test_id: @test.id, status: 'In progress')
     redirect_to current_user.test_passage(@test)
   end
