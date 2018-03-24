@@ -13,10 +13,10 @@ categories = Category.create([
 ])
 
 users = User.create([
-  { name: 'John', email: 'john@example.com', password_digest: '' },
-  { name: 'Mike', email: 'mike@example.com', password_digest: '' },
-  { name: 'Jane', email: 'jane@example.com', password_digest: '' },
-  { name: 'Lisa', email: 'lisa@example.com', password_digest: '' }
+  { name: 'John', email: 'john@example.com' },
+  { name: 'Mike', email: 'mike@example.com' },
+  { name: 'Jane', email: 'jane@example.com' },
+  { name: 'Lisa', email: 'lisa@example.com' }
 ])
 
 tests = Test.create([

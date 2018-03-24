@@ -4,7 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_save :before_save_set_question
-  validates :status, presence: true
+  # validates :status, presence: true
 
   def completed?
     current_question.nil?

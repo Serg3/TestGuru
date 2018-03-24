@@ -1,4 +1,11 @@
 class User < ApplicationRecord
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable,
+         :validatable
+
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :author_tests, class_name: 'Test', foreign_key: :author_id
@@ -6,9 +13,7 @@ class User < ApplicationRecord
   #VALID_EMAIL = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   VALID_EMAIL = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
-  has_secure_password
-
-  validates :name, presence: true
+  #validates :name, presence: true
   validates :password, presence: true
   validates :email, format: VALID_EMAIL, uniqueness: true
 
