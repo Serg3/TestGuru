@@ -16,16 +16,19 @@ users = User.create([
   { first_name: 'John', email: 'john@example.com', password: 'password' },
   { first_name: 'Mike', email: 'mike@example.com', password: 'password' },
   { first_name: 'Jane', email: 'jane@example.com', password: 'password' },
-  { first_name: 'Lisa', email: 'lisa@example.com', password: 'password' },
+  { first_name: 'Lisa', email: 'lisa@example.com', password: 'password' }
+])
+
+admins = Admin.create([
   { first_name: 'Sergey', last_name: 'Kovalyov', email: 'sergey@example.com', password: 'sergey', type: 'Admin' }
 ])
 
 tests = Test.create([
-  { title: 'Ruby', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id },
-  { title: 'Ruby', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(0).id },
-  { title: 'Rails', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(0).id },
-  { title: 'Rails', level: 2, category_id: categories.fetch(2).id, author_id: users.fetch(0).id },
-  { title: 'HTML', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id }
+  { title: 'Ruby', level: 0, category_id: categories.fetch(0).id, author_id: admins.fetch(0).id },
+  { title: 'Ruby', level: 1, category_id: categories.fetch(1).id, author_id: admins.fetch(0).id },
+  { title: 'Rails', level: 1, category_id: categories.fetch(1).id, author_id: admins.fetch(0).id },
+  { title: 'Rails', level: 2, category_id: categories.fetch(2).id, author_id: admins.fetch(0).id },
+  { title: 'HTML', level: 0, category_id: categories.fetch(0).id, author_id: admins.fetch(0).id }
 ])
 
 questions = Question.create([
