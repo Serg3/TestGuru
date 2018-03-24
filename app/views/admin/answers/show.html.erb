@@ -3,5 +3,5 @@
 <p>Answer: <%= @answer.body %></p>
 <p>Correct: <%= @answer.correct %></p>
 
-<%= link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'Back', @answer.question %>
+<%= link_to 'Edit', edit_admin_answer_path(@answer) %> |
+<%= link_to 'Back', admin_question_path(@answer.question) %>

@@ -2,10 +2,10 @@
 
 <h2>Questions</h2>
 
-<%= link_to 'New question', new_test_question_path(@test) %>
+<%= link_to 'New question', new_admin_test_question_path(@test) %>
 
 <ol>
-  <%= render partial: 'questions/question', collection: @test.questions %>
+  <%= render @test.questions %>
 </ol>
 
 <%= link_to 'Edit', edit_admin_test_path(@test) %> |
