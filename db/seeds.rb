@@ -13,17 +13,17 @@ categories = Category.create([
 ])
 
 users = User.create([
-  { name: 'John', email: 'john@example.com' },
-  { name: 'Mike', email: 'mike@example.com' },
-  { name: 'Jane', email: 'jane@example.com' },
-  { name: 'Lisa', email: 'lisa@example.com' }
+  { first_name: 'John', email: 'john@example.com', password: 'password' },
+  { first_name: 'Mike', email: 'mike@example.com', password: 'password' },
+  { first_name: 'Jane', email: 'jane@example.com', password: 'password' },
+  { first_name: 'Lisa', email: 'lisa@example.com', password: 'password' }
 ])
 
 tests = Test.create([
   { title: 'Ruby', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id },
   { title: 'Ruby', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(0).id },
-  { title: 'Rails', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(1).id },
-  { title: 'Rails', level: 2, category_id: categories.fetch(2).id, author_id: users.fetch(1).id },
+  { title: 'Rails', level: 1, category_id: categories.fetch(1).id, author_id: users.fetch(0).id },
+  { title: 'Rails', level: 2, category_id: categories.fetch(2).id, author_id: users.fetch(0).id },
   { title: 'HTML', level: 0, category_id: categories.fetch(0).id, author_id: users.fetch(0).id }
 ])
 
@@ -48,10 +48,10 @@ answers = Answer.create([
   { body: "'HTML' is an object oriented language.", correct: false, question_id: questions.fetch(4).id }
 ])
 
-tests = TestPassage.create([
-  { status: 'Complete', user_id: users[0].id, test_id: tests.fetch(4).id },
-  { status: 'In progress', user_id: users[0].id, test_id: tests.fetch(0).id },
-  { status: 'Complete', user_id: users[1].id, test_id: tests.fetch(2).id },
-  { status: 'In progress', user_id: users[1].id, test_id: tests.fetch(3).id },
-  { status: 'In progress', user_id: users[2].id, test_id: tests.fetch(0).id },
-])
+# tests = TestPassage.create([
+#   { status: 'Complete', user_id: users.fetch(0).id, test_id: tests.fetch(4).id },
+#   { status: 'In progress', user_id: users.fetch(0).id, test_id: tests.fetch(0).id },
+#   { status: 'Complete', user_id: users.fetch(1).id, test_id: tests.fetch(2).id },
+#   { status: 'In progress', user_id: users.fetch(1).id, test_id: tests.fetch(3).id },
+#   { status: 'In progress', user_id: users.fetch(2).id, test_id: tests.fetch(0).id },
+# ])
