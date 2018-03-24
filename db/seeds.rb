@@ -16,7 +16,8 @@ users = User.create([
   { first_name: 'John', email: 'john@example.com', password: 'password' },
   { first_name: 'Mike', email: 'mike@example.com', password: 'password' },
   { first_name: 'Jane', email: 'jane@example.com', password: 'password' },
-  { first_name: 'Lisa', email: 'lisa@example.com', password: 'password' }
+  { first_name: 'Lisa', email: 'lisa@example.com', password: 'password' },
+  { first_name: 'Sergey', last_name: 'Kovalyov', email: 'sergey@example.com', password: 'sergey', type: 'Admin' }
 ])
 
 tests = Test.create([
