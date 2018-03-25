@@ -38,11 +38,6 @@ class Admin::TestsController < Admin::BaseController
     redirect_to tests_path
   end
 
-  def start
-    current_user.test_passages.create(test_id: @test.id, status: 'In progress')
-    redirect_to current_user.test_passage(@test)
-  end
-
   private
 
   def test_params
