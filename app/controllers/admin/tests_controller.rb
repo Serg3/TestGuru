@@ -19,14 +19,16 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.author_tests.new(test_params)
     if @test.save
       redirect_to admin_tests_path
+      flash[:notice] = "The #{@test.title} test was created."
     else
       render :new
     end
   end
 
   def update
-    if @test.update_attributes(test_params)
+    if @test.update(test_params)
       redirect_to admin_tests_path
+      flash[:notice] = "The #{@test.title} test was updated."
     else
       render :edit
     end
@@ -35,6 +37,7 @@ class Admin::TestsController < Admin::BaseController
   def destroy
     @test.destroy
     redirect_to admin_tests_path
+    flash[:notice] = "The #{@test.title} test was deleted."
   end
 
   private
