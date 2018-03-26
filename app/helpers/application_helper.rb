@@ -15,7 +15,7 @@ module ApplicationHelper
     end
   end
 
-  def flash_message(action)
-    content_tag :p, flash[action], class: "flash #{action.to_s}"
+  def flash_message(action, message)
+    content_tag :p, message, class: "flash #{action}"
   end
 end

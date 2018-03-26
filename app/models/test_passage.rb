@@ -4,7 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_save :before_save_set_question
-  validates :status, presence: true
+  # validates :status, presence: true
 
   def completed?
     current_question.nil?
@@ -39,10 +39,6 @@ class TestPassage < ApplicationRecord
 
   def correct_answer?(answer_ids)
     correct_answers.ids.sort == answer_ids.map(&:to_i).sort
-    # correct_answers_count = correct_answers.count
-    #
-    # (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-    # correct_answers_count == answer_ids.count
   end
 
   def correct_answers
