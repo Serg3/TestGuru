@@ -1,9 +1,9 @@
 <% if @test_passage.passed? %>
-  <h1 class='test_result_completed'>The <%= @test_passage.test.title %> test was completed!</h1>
+  <h1 class='test_result_completed'><%= t('.completed', title: @test_passage.test.title) %></h1>
 <% else %>
-  <h1 class='test_result_failed'>The <%= @test_passage.test.title %> test was failed!</h1>
+  <h1 class='test_result_failed'><%= t('.failed', title: @test_passage.test.title) %></h1>
 <% end %>
 
-<h3>Result: <%= @test_passage.result %></h3>
+<h3><%= t('.points', totla: @test_passage.result) %></h3>
 
-<p><%= link_to 'Back', tests_path %></p>
+<p><%= link_to t('.back'), tests_path %></p>

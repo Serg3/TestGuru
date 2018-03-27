@@ -1,33 +1,145 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 ru:
-  hello: "Привет мир"
+  hello: "Привет, мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Текст"
+      answer:
+        body: "Текст"
+        correct: "Правильный"
+
+    select:
+      prompt: "Выбрать категорию"
+
+  tests:
+    test:
+      start: "Старт"
+
+    index:
+      header: "Тесты"
+      column_1: "Название"
+      column_2: "Уровень"
+      column_3: "Кол-во вопросов"
+      column_4: "Действия"
+
+    start:
+      wish: "Удачи!"
+
+  test_passages:
+    show:
+      header: "Прохождение теста %{title}."
+      question: "Вопрос %{number} из %{total}"
+      next: "Следующий"
+
+    result:
+      completed: "Тест %{title} успешно завершен!"
+      failed: "Тест %{title} не сдан!"
+      points: "Результат: %{totla}%"
+      back: "Назад"
+
+  admin:
+    nav:
+      header: "ТестГуру Административная панель"
+      greeting_1: "Добро пожаловать,"
+      greeting_2: "Гуру"
+      exit: "Выйти"
+
+    tests:
+      test:
+        open: "Открыть"
+        update: "Изменить"
+        delete: "Удалить"
+        delete_message: "Вы уверены?"
+      create:
+        success: "Тест был успешно создан."
+      update:
+        success: "Тест был успешно обновлен."
+      destroy:
+        success: "Тест был успешно удален."
+      index:
+        header: "Тесты"
+        column_1: "Название"
+        column_2: "Уровень"
+        column_3: "Кол-во вопросов"
+        column_4: "Действия"
+        unauthorized: "Вы не авторизированы для просмотра этой страницы."
+      show:
+        header: "Тест №%{id} '%{title}'"
+        body: "Вопросы"
+        new_question: "Новый вопрос"
+        update: "Изменить"
+        back: "Назад"
+      new:
+        header: "Создать новый %{resource}"
+        back: "Назад"
+      edit:
+        header: "Изменить %{resource} №%{id}"
+        back: "Назад"
+
+    questions:
+      question:
+        open: "Открыть"
+        update: "Изменить"
+        delete: "Удалить"
+        delete_message: "Вы уверены?"
+      create:
+        success: "Вопрос был успешно создан."
+      update:
+        success: "Вопрос был успешно обновлен."
+      destroy:
+        success: "Вопрос был успешно удален."
+      show:
+        body: "Ответы"
+        new: "Новый ответ"
+        update: "Изменить"
+        back: "Назад"
+      new:
+        header: "Создать новый %{resource}"
+        back: "Назад"
+      edit:
+        header: "Изменить %{resource} №%{id}"
+        back: "Назад"
+
+    answers:
+      answer:
+        open: "Открыть"
+        update: "Изменить"
+        delete: "Удалить"
+        delete_message: "Вы уверены?"
+      create:
+        success: "Ответ был успешно создан."
+      update:
+        success: "Ответ был успешно обновлен."
+      destroy:
+        success: "Ответ был успешно удален."
+      show:
+        correct: "Правильно"
+        update: "Изменить"
+        back: "Назад"
+      new:
+        header: "Создать новый %{resource}"
+        back: "Назад"
+      edit:
+        header: "Изменить %{resource} №%{id}"
+        back: "Назад"
+
+  devise:
+    sessions:
+      user:
+        greeting: "Привет, %{full_name}!"
