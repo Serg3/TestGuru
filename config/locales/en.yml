@@ -27,6 +27,18 @@ en:
     select:
       prompt: "Please select"
 
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+    header:
+      title: "Test Guru"
+      logout: "Logout"
+      login: "Log In"
+      sign_up: "Sign Up"
+
   tests:
     test:
       start: "Start"
@@ -109,10 +121,9 @@ en:
       unauthorized: "You are not authorized to view this page."
     pop_up:
       delete: "You sure?"
-    new_title:
-      header: "Create new %{resource}"
-    edit_title:
-      header: "Edit %{resource} №%{id}"
+    header:
+      new: "Create new %{resource}"
+      edit: "Edit %{resource} №%{id}"
     button:
       open: "Show"
       back: "Back"

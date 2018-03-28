@@ -2,7 +2,7 @@
 
   <div class='nav main'>
     <h3>
-      <%= link_to 'Test Guru', root_path %>
+      <%= link_to t('.title'), root_path %>
     </h3>
   </div>
 
@@ -10,10 +10,10 @@
     <h5>
       <% if user_signed_in? %>
         Welcome, <b><%= current_user.email %></b> Guru |
-        <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+        <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
       <% else %>
-        <%= link_to 'Log In', new_user_session_path %>
-        <%= link_to 'Sign Up', new_user_registration_path %>
+        <%= link_to t('.login'), new_user_session_path %>
+        <%= link_to t('.sign_up'), new_user_registration_path %>
       <% end %>
     </h5>
   </div>

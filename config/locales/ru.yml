@@ -27,6 +27,20 @@ ru:
     select:
       prompt: "Выбрать категорию"
 
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+    header:
+      title: "Тест Гуру"
+      logout: "Выйти"
+      login: "Вход"
+      sign_up: "Регистрация"
+
   tests:
     test:
       start: "Старт"
@@ -109,10 +123,9 @@ ru:
       unauthorized: "Вы не авторизированы для просмотра этой страницы."
     pop_up:
       delete: "Вы уверены?"
-    new_title:
-      header: "Создать новый %{resource}"
-    edit_title:
-      header: "Изменить %{resource} №%{id}"
+    header:
+      new: "Создать новый %{resource}"
+      edit: "Изменить %{resource} №%{id}"
     button:
       open: "Открыть"
       back: "Назад"
