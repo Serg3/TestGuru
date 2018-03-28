@@ -131,3 +131,7 @@ ru:
       back: "Назад"
       update: "Изменить"
       delete: "Удалить"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на ТестГуру!"
