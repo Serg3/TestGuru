@@ -1,33 +1,137 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 ru:
-  hello: "Привет мир"
+  hello: "Привет, мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Текст"
+      answer:
+        body: "Текст"
+        correct: "Правильный"
+
+    select:
+      prompt: "Выбрать категорию"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+    header:
+      title: "Тест Гуру"
+      logout: "Выйти"
+      login: "Вход"
+      sign_up: "Регистрация"
+
+  tests:
+    test:
+      start: "Старт"
+
+    index:
+      header: "Тесты"
+      column_1: "Название"
+      column_2: "Уровень"
+      column_3: "Кол-во вопросов"
+      column_4: "Действия"
+
+    start:
+      wish: "Удачи!"
+
+  test_passages:
+    show:
+      header: "Прохождение теста %{title}."
+      question: "Вопрос %{number} из %{total}"
+      next: "Следующий"
+
+    result:
+      completed: "Тест %{title} успешно завершен!"
+      failed: "Тест %{title} не сдан!"
+      points: "Результат: %{total}%"
+      back: "Назад"
+
+  admin:
+    nav:
+      header: "ТестГуру Административная панель"
+      greeting_1: "Добро пожаловать,"
+      greeting_2: "Гуру"
+      exit: "Выйти"
+
+    tests:
+      create:
+        success: "Тест был успешно создан."
+      update:
+        success: "Тест был успешно обновлен."
+      destroy:
+        success: "Тест был успешно удален."
+      index:
+        header: "Тесты"
+        column_1: "Название"
+        column_2: "Уровень"
+        column_3: "Кол-во вопросов"
+        column_4: "Действия"
+      show:
+        header: "Тест №%{id} '%{title}'"
+        body: "Вопросы"
+        new_question: "Новый вопрос"
+
+    questions:
+      create:
+        success: "Вопрос был успешно создан."
+      update:
+        success: "Вопрос был успешно обновлен."
+      destroy:
+        success: "Вопрос был успешно удален."
+      show:
+        body: "Ответы"
+        new: "Новый ответ"
+
+    answers:
+      create:
+        success: "Ответ был успешно создан."
+      update:
+        success: "Ответ был успешно обновлен."
+      destroy:
+        success: "Ответ был успешно удален."
+      show:
+        correct: "Правильно"
+
+  devise:
+    sessions:
+      user:
+        greeting: "Привет, %{full_name}!"
+
+  common:
+    flash:
+      unauthorized: "Вы не авторизированы для просмотра этой страницы."
+    pop_up:
+      delete: "Вы уверены?"
+    header:
+      new: "Создать новый %{resource}"
+      edit: "Изменить %{resource} №%{id}"
+    button:
+      open: "Открыть"
+      back: "Назад"
+      update: "Изменить"
+      delete: "Удалить"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на ТестГуру!"

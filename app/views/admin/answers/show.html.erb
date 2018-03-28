@@ -1,7 +1,7 @@
-<p>Question: <%= @answer.question.body %></p>
+<h2><%= @answer.question.body %></h3>
 
-<p>Answer: <%= @answer.body %></p>
-<p>Correct: <%= @answer.correct %></p>
+<h3><%= @answer.body %></h4>
+<p><%= t('.correct') %>: <%= @answer.correct %></p>
 
-<%= link_to 'Edit', edit_admin_answer_path(@answer) %> |
-<%= link_to 'Back', admin_question_path(@answer.question) %>
+<%= link_to t('common.button.update'), edit_admin_answer_path(@answer) %> |
+<%= link_to t('common.button.back'), admin_question_path(@answer.question) %>

@@ -8,7 +8,7 @@ class TestsController < ApplicationController
 
   def start
     current_user.test_passages.create(test_id: @test.id, status: 'In progress')
-    redirect_to current_user.test_passage(@test)
+    redirect_to current_user.test_passage(@test), notice: t('.wish')
   end
 
   private

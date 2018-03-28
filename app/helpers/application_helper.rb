@@ -9,9 +9,9 @@ module ApplicationHelper
 
   def set_header_title(resource)
     if resource.new_record?
-      content_tag('h1', "Create new #{resource.class}")
+      content_tag('h1', t('common.header.new', resource: resource.class))
     else
-      content_tag('h1', "Edit #{resource.class} №#{resource.id}")
+      content_tag('h1', t('common.header.edit', resource: resource.class, id: resource.id))
     end
   end
 

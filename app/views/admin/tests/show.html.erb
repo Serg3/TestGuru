@@ -1,12 +1,12 @@
-<h1>Test №<%= @test.id %>. <%= @test.title %></h1>
+<h1><%= t('.header', id: @test.id, title: @test.title) %></h1>
 
-<h2>Questions</h2>
+<h2><%= t('.body') %></h2>
 
-<%= link_to 'New question', new_admin_test_question_path(@test) %>
+<%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 
 <ol>
   <%= render @test.questions %>
 </ol>
 
-<%= link_to 'Edit', edit_admin_test_path(@test) %> |
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('common.button.update'), edit_admin_test_path(@test) %> |
+<%= link_to t('common.button.back'), admin_tests_path %>

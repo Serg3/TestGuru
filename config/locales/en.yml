@@ -1,33 +1,135 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  hello: "Hello, world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Title"
+      answer:
+        body: "Title"
+        correct: "Title"
+
+    select:
+      prompt: "Please select"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+    header:
+      title: "Test Guru"
+      logout: "Logout"
+      login: "Log In"
+      sign_up: "Sign Up"
+
+  tests:
+    test:
+      start: "Start"
+
+    index:
+      header: "Tests"
+      column_1: "Title"
+      column_2: "Level"
+      column_3: "Questions"
+      column_4: "Actions"
+
+    start:
+      wish: "Good luck!"
+
+  test_passages:
+    show:
+      header: "Passing the %{title} test."
+      question: "Question %{number} from %{total}"
+      next: "Next"
+
+    result:
+      completed: "The %{title} test was completed!"
+      failed: "The %{title} test was failed!"
+      points: "Result: %{total}%"
+      back: "Back"
+
+  admin:
+    nav:
+      header: "TestGuru Admin Panel"
+      greeting_1: "Welcome,"
+      greeting_2: "Guru"
+      exit: "Logout"
+
+    tests:
+      create:
+        success: "Test was successfully created."
+      update:
+        success: "Test was successfully updated."
+      destroy:
+        success: "Test was successfully deleted."
+      index:
+        header: "Tests"
+        column_1: "Title"
+        column_2: "Level"
+        column_3: "Questions"
+        column_4: "Actions"
+      show:
+        header: "Test №%{id} '%{title}'"
+        body: "Questions"
+        new_question: "New question"
+
+    questions:
+      create:
+        success: "Question was successfully created."
+      update:
+        success: "Question was successfully updated."
+      destroy:
+        success: "Question was successfully deleted."
+      show:
+        body: "Answers"
+        new: "New answer"
+
+    answers:
+      create:
+        success: "Answer was successfully created."
+      update:
+        success: "Answer was successfully updated."
+      destroy:
+        success: "Answer was successfully deleted."
+      show:
+        correct: "Correct"
+
+  devise:
+    sessions:
+      user:
+        greeting: "Hello, %{full_name}!"
+
+  common:
+    flash:
+      unauthorized: "You are not authorized to view this page."
+    pop_up:
+      delete: "You sure?"
+    header:
+      new: "Create new %{resource}"
+      edit: "Edit %{resource} №%{id}"
+    button:
+      open: "Show"
+      back: "Back"
+      update: "Edit"
+      delete: "Delete"
+
+  test_mailer:
+    completed_test:
+      subject: "You just complete the TestGuru test!"
