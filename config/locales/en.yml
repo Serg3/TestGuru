@@ -33,7 +33,7 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
-    header:
+    nav:
       title: "Test Guru"
       logout: "Logout"
       login: "Log In"
@@ -115,6 +115,10 @@ en:
     sessions:
       user:
         greeting: "Hello, %{full_name}!"
+      new:
+        header: "Enter the Guru Gates"
+        remember_check: "Remember me"
+        button: "Enter"
 
   common:
     flash:

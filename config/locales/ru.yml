@@ -35,7 +35,7 @@ ru:
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
-    header:
+    nav:
       title: "Тест Гуру"
       logout: "Выйти"
       login: "Вход"
@@ -117,6 +117,10 @@ ru:
     sessions:
       user:
         greeting: "Привет, %{full_name}!"
+      new:
+        header: "Вход в Гуру"
+        remember_check: "Запомнить меня"
+        button: "Вход"
 
   common:
     flash:
