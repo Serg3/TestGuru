@@ -1,8 +1,8 @@
 <li>
   <%= question.body %><br />
-    <%= link_to t('.open'), admin_question_path(question) %> |
-    <%= link_to t('.update'), edit_admin_question_path(question) %> |
-    <%= link_to t('.delete'), admin_question_path(question),
+    <%= link_to t('common.button.open'), admin_question_path(question) %> |
+    <%= link_to t('common.button.update'), edit_admin_question_path(question) %> |
+    <%= link_to t('common.button.delete'), admin_question_path(question),
                                       method: :delete,
-                                      data: { confirm: t('.delete_message') } %><br />
+                                      data: { confirm: t('common.pop_up.delete') } %><br />
 </li>

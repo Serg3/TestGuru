@@ -50,7 +50,7 @@ en:
     result:
       completed: "The %{title} test was completed!"
       failed: "The %{title} test was failed!"
-      points: "Result: %{totla}%"
+      points: "Result: %{total}%"
       back: "Back"
 
   admin:
@@ -61,11 +61,6 @@ en:
       exit: "Logout"
 
     tests:
-      test:
-        open: "Show"
-        update: "Edit"
-        delete: "Delete"
-        delete_message: "You sure?"
       create:
         success: "Test was successfully created."
       update:
@@ -78,26 +73,12 @@ en:
         column_2: "Level"
         column_3: "Questions"
         column_4: "Actions"
-        unauthorized: "You are not authorized to view this page."
       show:
         header: "Test №%{id} '%{title}'"
         body: "Questions"
         new_question: "New question"
-        update: "Edit"
-        back: "Back"
-      new:
-        header: "Create new %{resource}"
-        back: "Back"
-      edit:
-        header: "Edit %{resource} №%{id}"
-        back: "Back"
 
     questions:
-      question:
-        open: "Show"
-        update: "Edit"
-        delete: "Delete"
-        delete_message: "You sure?"
       create:
         success: "Question was successfully created."
       update:
@@ -107,21 +88,8 @@ en:
       show:
         body: "Answers"
         new: "New answer"
-        update: "Edit"
-        back: "Back"
-      new:
-        header: "Create new %{resource}"
-        back: "Back"
-      edit:
-        header: "Edit %{resource} №%{id}"
-        back: "Back"
 
     answers:
-      answer:
-        open: "Show"
-        update: "Edit"
-        delete: "Delete"
-        delete_message: "You sure?"
       create:
         success: "Answer was successfully created."
       update:
@@ -130,16 +98,23 @@ en:
         success: "Answer was successfully deleted."
       show:
         correct: "Correct"
-        update: "Edit"
-        back: "Back"
-      new:
-        header: "Create new %{resource}"
-        back: "Back"
-      edit:
-        header: "Edit %{resource} №%{id}"
-        back: "Back"
 
   devise:
     sessions:
       user:
         greeting: "Hello, %{full_name}!"
+
+  common:
+    flash:
+      unauthorized: "You are not authorized to view this page."
+    pop_up:
+      delete: "You sure?"
+    new_title:
+      header: "Create new %{resource}"
+    edit_title:
+      header: "Edit %{resource} №%{id}"
+    button:
+      open: "Show"
+      back: "Back"
+      update: "Edit"
+      delete: "Delete"

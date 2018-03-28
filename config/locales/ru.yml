@@ -50,7 +50,7 @@ ru:
     result:
       completed: "Тест %{title} успешно завершен!"
       failed: "Тест %{title} не сдан!"
-      points: "Результат: %{totla}%"
+      points: "Результат: %{total}%"
       back: "Назад"
 
   admin:
@@ -61,11 +61,6 @@ ru:
       exit: "Выйти"
 
     tests:
-      test:
-        open: "Открыть"
-        update: "Изменить"
-        delete: "Удалить"
-        delete_message: "Вы уверены?"
       create:
         success: "Тест был успешно создан."
       update:
@@ -78,26 +73,12 @@ ru:
         column_2: "Уровень"
         column_3: "Кол-во вопросов"
         column_4: "Действия"
-        unauthorized: "Вы не авторизированы для просмотра этой страницы."
       show:
         header: "Тест №%{id} '%{title}'"
         body: "Вопросы"
         new_question: "Новый вопрос"
-        update: "Изменить"
-        back: "Назад"
-      new:
-        header: "Создать новый %{resource}"
-        back: "Назад"
-      edit:
-        header: "Изменить %{resource} №%{id}"
-        back: "Назад"
 
     questions:
-      question:
-        open: "Открыть"
-        update: "Изменить"
-        delete: "Удалить"
-        delete_message: "Вы уверены?"
       create:
         success: "Вопрос был успешно создан."
       update:
@@ -107,21 +88,8 @@ ru:
       show:
         body: "Ответы"
         new: "Новый ответ"
-        update: "Изменить"
-        back: "Назад"
-      new:
-        header: "Создать новый %{resource}"
-        back: "Назад"
-      edit:
-        header: "Изменить %{resource} №%{id}"
-        back: "Назад"
 
     answers:
-      answer:
-        open: "Открыть"
-        update: "Изменить"
-        delete: "Удалить"
-        delete_message: "Вы уверены?"
       create:
         success: "Ответ был успешно создан."
       update:
@@ -130,16 +98,23 @@ ru:
         success: "Ответ был успешно удален."
       show:
         correct: "Правильно"
-        update: "Изменить"
-        back: "Назад"
-      new:
-        header: "Создать новый %{resource}"
-        back: "Назад"
-      edit:
-        header: "Изменить %{resource} №%{id}"
-        back: "Назад"
 
   devise:
     sessions:
       user:
         greeting: "Привет, %{full_name}!"
+
+  common:
+    flash:
+      unauthorized: "Вы не авторизированы для просмотра этой страницы."
+    pop_up:
+      delete: "Вы уверены?"
+    new_title:
+      header: "Создать новый %{resource}"
+    edit_title:
+      header: "Изменить %{resource} №%{id}"
+    button:
+      open: "Открыть"
+      back: "Назад"
+      update: "Изменить"
+      delete: "Удалить"

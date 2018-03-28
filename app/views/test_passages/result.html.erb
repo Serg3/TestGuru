@@ -4,6 +4,6 @@
   <h1 class='test_result_failed'><%= t('.failed', title: @test_passage.test.title) %></h1>
 <% end %>
 
-<h3><%= t('.points', totla: @test_passage.result) %></h3>
+<h3><%= t('.points', total: @test_passage.result) %></h3>
 
-<p><%= link_to t('.back'), tests_path %></p>
+<p><%= link_to t('common.button.back'), tests_path %></p>
