@@ -2,12 +2,12 @@
 
 <p><%= link_to t('.new_test'), new_admin_test_path %></p>
 
-<table>
+<table class="table table-bordered table-striped">
   <tr>
-    <th><%= t('.column_1') %></th>
-    <th><%= t('.column_2') %></th>
-    <th><%= t('.column_3') %></th>
-    <th colspan="3"><%= t('.column_4') %></th>
+    <th class="align-middle"><%= t('.column_1') %></th>
+    <th class="align-middle"><%= t('.column_2') %></th>
+    <th class="align-middle"><%= t('.column_3') %></th>
+    <th class="align-middle" colspan="3"><%= t('.column_4') %></th>
   </tr>
 
   <%= render @tests %>
