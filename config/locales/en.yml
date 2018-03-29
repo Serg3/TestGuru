@@ -35,9 +35,13 @@ en:
 
     nav:
       title: "Test Guru"
+      title_admin: "Admin Panel"
       logout: "Logout"
       login: "Log In"
       sign_up: "Sign Up"
+      header: "TestGuru Admin Panel"
+      greeting_1: "Welcome,"
+      greeting_2: "Guru"
 
   tests:
     test:
@@ -67,7 +71,8 @@ en:
 
   admin:
     nav:
-      header: "TestGuru Admin Panel"
+      title: "TestGuru"
+      title_admin: "Admin Panel"
       greeting_1: "Welcome,"
       greeting_2: "Guru"
       exit: "Logout"

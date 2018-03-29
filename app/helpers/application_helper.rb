@@ -15,7 +15,9 @@ module ApplicationHelper
     end
   end
 
-  def flash_message(action, message)
-    content_tag :p, message, class: "flash #{action}"
+  def flash_message(action, info)
+    content_tag :div, class: "alert #{info["div_class"]}" do
+      content_tag :span, info["text"]
+    end
   end
 end
