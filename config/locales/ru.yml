@@ -63,6 +63,7 @@ ru:
     show:
       header: "Прохождение теста %{title}."
       question: "Вопрос %{number} из %{total}"
+      gist: "Gist вопрос"
       next: "Следующий"
 
     result:
@@ -70,6 +71,10 @@ ru:
       failed: "Тест %{title} не сдан!"
       points: "Результат: %{total}%"
       back: "Назад"
+
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка."
 
   admin:
     nav:
@@ -144,3 +149,7 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на ТестГуру!"
+
+  services:
+    github:
+      description: "Вопрос по %{title} из ТестГуру"

@@ -61,6 +61,7 @@ en:
     show:
       header: "Passing the %{title} test."
       question: "Question %{number} from %{total}"
+      gist: "Gist Question"
       next: "Next"
 
     result:
@@ -68,6 +69,10 @@ en:
       failed: "The %{title} test was failed!"
       points: "Result: %{total}%"
       back: "Back"
+
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist."
 
   admin:
     nav:
@@ -142,3 +147,7 @@ en:
   test_mailer:
     completed_test:
       subject: "You just complete the TestGuru test!"
+
+  services:
+    github:
+      description: "A question about %{title} from TestGuru"

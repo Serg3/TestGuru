@@ -1,7 +1,7 @@
 <% if @test_passage.passed? %>
-  <h1 class='test_result_completed'><%= t('.completed', title: @test_passage.test.title) %></h1>
+  <h1 class='text-success'><%= t('.completed', title: @test_passage.test.title) %></h1>
 <% else %>
-  <h1 class='test_result_failed'><%= t('.failed', title: @test_passage.test.title) %></h1>
+  <h1 class='text-danger'><%= t('.failed', title: @test_passage.test.title) %></h1>
 <% end %>
 
 <h3><%= t('.points', total: @test_passage.result) %></h3>
