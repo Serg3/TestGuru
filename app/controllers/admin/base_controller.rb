@@ -7,9 +7,9 @@ class Admin::BaseController < ApplicationController
   private
 
   def admin_required!
-    redirect_to root_path, alert: {
-                                    text: t('common.flash.unauthorized'),
-                                    div_class: "alert-danger"
-                                  } unless current_user.admin?
+    unless current_user.admin?
+      flash["alert-danger"] = t('common.flash.unauthorized')
+      redirect_to root_path
+    end
   end
 end

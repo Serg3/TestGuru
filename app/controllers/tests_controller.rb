@@ -8,10 +8,9 @@ class TestsController < ApplicationController
 
   def start
     current_user.test_passages.create(test_id: @test.id, status: 'In progress')
-    redirect_to current_user.test_passage(@test), notice: {
-                                                            text: t('.wish'),
-                                                            div_class: "alert-info"
-                                                          }
+
+    flash["alert-info"] = t('.wish')
+    redirect_to current_user.test_passage(@test)
   end
 
   private
