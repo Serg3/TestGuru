@@ -16,6 +16,6 @@ module ApplicationHelper
   end
 
   def flash_message(action, message)
-    content_tag :p, message, class: "flash #{action}"
+    content_tag :div, message, class: "alert #{action}"
   end
 end

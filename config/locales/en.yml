@@ -33,11 +33,15 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
-    header:
+    nav:
       title: "Test Guru"
+      title_admin: "Admin Panel"
       logout: "Logout"
       login: "Log In"
       sign_up: "Sign Up"
+      header: "TestGuru Admin Panel"
+      greeting_1: "Welcome,"
+      greeting_2: "Guru"
 
   tests:
     test:
@@ -67,7 +71,8 @@ en:
 
   admin:
     nav:
-      header: "TestGuru Admin Panel"
+      title: "TestGuru"
+      title_admin: "Admin Panel"
       greeting_1: "Welcome,"
       greeting_2: "Guru"
       exit: "Logout"
@@ -115,6 +120,10 @@ en:
     sessions:
       user:
         greeting: "Hello, %{full_name}!"
+      new:
+        header: "Enter the Guru Gates"
+        remember_check: "Remember me"
+        button: "Enter"
 
   common:
     flash:

@@ -35,11 +35,15 @@ ru:
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
-    header:
-      title: "Тест Гуру"
+    nav:
+      title: "ТестГуру"
+      title_admin: "Административная панель"
       logout: "Выйти"
       login: "Вход"
       sign_up: "Регистрация"
+      header: "ТестГуру Административная панель"
+      greeting_1: "Добро пожаловать,"
+      greeting_2: "Гуру"
 
   tests:
     test:
@@ -69,7 +73,8 @@ ru:
 
   admin:
     nav:
-      header: "ТестГуру Административная панель"
+      title: "ТестГуру"
+      title_admin: "Административная панель"
       greeting_1: "Добро пожаловать,"
       greeting_2: "Гуру"
       exit: "Выйти"
@@ -117,6 +122,10 @@ ru:
     sessions:
       user:
         greeting: "Привет, %{full_name}!"
+      new:
+        header: "Вход в Гуру"
+        remember_check: "Запомнить меня"
+        button: "Вход"
 
   common:
     flash:
