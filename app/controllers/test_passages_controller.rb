@@ -24,8 +24,12 @@ class TestPassagesController < ApplicationController
   def gist
     result = GistQuestionService.new(@test_passage.current_question).call
 
-    if result.success?
-      flash["alert-info"] = t('.success')
+    if result
+      Gist.create(user: current_user,
+                  question: @test_passage.current_question,
+                  url: result.html_url)
+
+      flash["alert-info"] = t('.success', url: result.html_url)
     else
       flash["alert-danger"] = t('.failure')
     end

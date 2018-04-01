@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :author_tests, class_name: 'Test', foreign_key: :author_id
+  has_many :gists
 
   # VALID_EMAIL = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   VALID_EMAIL = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
