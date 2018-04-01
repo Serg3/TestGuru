@@ -123,6 +123,12 @@ ru:
       show:
         correct: "Правильно"
 
+    gists:
+      index:
+        column_1: "Вопрос"
+        column_2: "Ссылка"
+        column_3: "Пользователь"
+
   devise:
     sessions:
       user:

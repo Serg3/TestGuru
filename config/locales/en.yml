@@ -121,6 +121,12 @@ en:
       show:
         correct: "Correct"
 
+    gists:
+      index:
+        column_1: "Question"
+        column_2: "URL"
+        column_3: "User"
+
   devise:
     sessions:
       user:
