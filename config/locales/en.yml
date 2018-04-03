@@ -71,7 +71,7 @@ en:
       back: "Back"
 
     gist:
-      success: "Gist was successfully created at %{url}!"
+      success: "Gist was successfully created at %{url}"
       failure: "An error occurred while saving gist."
 
   admin:

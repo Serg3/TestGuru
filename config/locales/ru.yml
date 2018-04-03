@@ -73,7 +73,7 @@ ru:
       back: "Назад"
 
     gist:
-      success: "Gist успешно сохранен в %{url}!"
+      success: "Gist успешно сохранен в %{url}"
       failure: "Во время сохранения gist произошла ошибка."
 
   admin:
