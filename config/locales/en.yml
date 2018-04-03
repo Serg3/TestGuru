@@ -61,6 +61,7 @@ en:
     show:
       header: "Passing the %{title} test."
       question: "Question %{number} from %{total}"
+      gist: "Gist Question"
       next: "Next"
 
     result:
@@ -68,6 +69,10 @@ en:
       failed: "The %{title} test was failed!"
       points: "Result: %{total}%"
       back: "Back"
+
+    gist:
+      success: "Gist was successfully created at %{url}"
+      failure: "An error occurred while saving gist."
 
   admin:
     nav:
@@ -116,6 +121,12 @@ en:
       show:
         correct: "Correct"
 
+    gists:
+      index:
+        column_1: "Question"
+        column_2: "URL"
+        column_3: "User"
+
   devise:
     sessions:
       user:
@@ -142,3 +153,7 @@ en:
   test_mailer:
     completed_test:
       subject: "You just complete the TestGuru test!"
+
+  services:
+    github:
+      description: "A question about %{title} from TestGuru"

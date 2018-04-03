@@ -37,6 +37,11 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise', '~> 4.0'
 
+# NETWORKING
+
+gem 'faraday'
+gem "octokit", "~> 4.0"
+
 # LOCALIZATION
 
 gem 'rails-i18n', '~> 5.0.0'
@@ -52,6 +57,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  # AUTH
+
+  gem 'dotenv-rails'
 end
 
 group :development do
