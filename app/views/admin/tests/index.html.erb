@@ -4,7 +4,11 @@
 
 <table class="table table-bordered table-striped">
   <tr>
-    <th class="align-middle"><%= t('.column_1') %></th>
+    <th class="sort-by-title pointer">
+      <%= t('.column_1') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
     <th class="align-middle"><%= t('.column_2') %></th>
     <th class="align-middle"><%= t('.column_3') %></th>
     <th class="align-middle" colspan="3"><%= t('.column_4') %></th>
