@@ -101,6 +101,8 @@ ru:
         header: "Тест №%{id} '%{title}'"
         body: "Вопросы"
         new_question: "Новый вопрос"
+      form_inline:
+        submit: "OK"
 
     questions:
       create:
