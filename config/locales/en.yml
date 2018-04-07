@@ -80,7 +80,7 @@ en:
       title_admin: "Admin Panel"
       greeting_1: "Welcome,"
       greeting_2: "Guru"
-      exit: "Logout"
+      logout: "Logout"
 
     tests:
       create:

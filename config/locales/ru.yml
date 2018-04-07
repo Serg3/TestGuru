@@ -82,7 +82,7 @@ ru:
       title_admin: "Административная панель"
       greeting_1: "Добро пожаловать,"
       greeting_2: "Гуру"
-      exit: "Выйти"
+      logout: "Выйти"
 
     tests:
       create:
