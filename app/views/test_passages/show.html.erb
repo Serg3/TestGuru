@@ -1,3 +1,9 @@
+<%= content_tag :progress,
+                class: 'progress-bar',
+                value: @test_passage.current_question_number,
+                max: @test_passage.total_questions_count do %>
+<% end %>
+
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p>

@@ -99,6 +99,8 @@ en:
         header: "Test №%{id} '%{title}'"
         body: "Questions"
         new_question: "New question"
+      form_inline:
+        submit: "OK"
 
     questions:
       create:
