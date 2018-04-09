@@ -23,6 +23,9 @@ en:
       answer:
         body: "Title"
         correct: "Title"
+      feedback:
+        title: "Title"
+        body: "Text"
 
     select:
       prompt: "Please select"
@@ -73,6 +76,12 @@ en:
     gist:
       success: "Gist was successfully created at %{url}"
       failure: "An error occurred while saving gist."
+
+  feedbacks:
+    create:
+      success: "Feedback was sent."
+    new:
+      title: "Leave Your feedback here:"
 
   admin:
     nav:
@@ -155,6 +164,10 @@ en:
   test_mailer:
     completed_test:
       subject: "You just complete the TestGuru test!"
+
+  feedbacks_mailer:
+    feedback:
+      subject: "Feedback about TestGuru"
 
   services:
     github:

@@ -23,6 +23,9 @@ ru:
       answer:
         body: "Текст"
         correct: "Правильный"
+      feedback:
+        title: "Заголовок"
+        body: "Текст"
 
     select:
       prompt: "Выбрать категорию"
@@ -75,6 +78,12 @@ ru:
     gist:
       success: "Gist успешно сохранен в %{url}"
       failure: "Во время сохранения gist произошла ошибка."
+
+  feedbacks:
+    create:
+      success: "Отзыв был отправлен."
+    new:
+      title: "Оставьте Ваш отзыв здесь:"
 
   admin:
     nav:
@@ -157,6 +166,10 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на ТестГуру!"
+
+  feedbacks_mailer:
+    feedback:
+      subject: "Отзыв о ТестГуру"
 
   services:
     github:
