@@ -10,6 +10,6 @@ class FeedbacksMailer < ApplicationMailer
   private
 
   def find_admin
-    @admin = User.find_by(type: 'Admin')
+    @admin = Admin.first
   end
 end

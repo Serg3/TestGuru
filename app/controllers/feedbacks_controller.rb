@@ -4,11 +4,12 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    @feedback = current_user.feedbacks.create(feedback_params)
+    @feedback = current_user.feedbacks.build(feedback_params)
 
     if @feedback.save
       FeedbacksMailer.feedback(@feedback).deliver_now
-      redirect_to root_path, notice: t('.success')
+      flash["alert-info"] = t('.success')
+      redirect_to root_path
     else
       render :new
     end
