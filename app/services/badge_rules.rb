@@ -37,7 +37,7 @@ class BadgeRules
   # за прохождение теста с первой попытки
 
   def first_try?
-    successful_test? && @user.tests.where(test_id: @test.id).count == 1
+    successful_test? && @user.tests.where(id: @test.id).count == 1
   end
 
   # за прохождение теста определенного уровня
