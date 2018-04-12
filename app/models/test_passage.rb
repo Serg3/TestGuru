@@ -4,14 +4,14 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_save :before_save_set_question
-  # validates :status, presence: true
+  before_update :before_update_check_timer
 
   def completed?
     current_question.nil?
   end
 
   def accept!(answer_ids)
-    self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.correct_questions += 1 if correct_answer?(answer_ids) unless time_over?
     save!
   end
 
@@ -32,13 +32,17 @@ class TestPassage < ApplicationRecord
   end
 
   def timer
-    ((created_at + test.timer.minutes) - Time.now).to_i
+    (total_time - Time.now).to_i
   end
 
   private
 
   def before_save_set_question
     self.current_question = self.current_question.nil? ? test.questions.first : next_question
+  end
+
+  def before_update_check_timer
+    self.current_question = nil if time_over?
   end
 
   def correct_answer?(answer_ids)
@@ -55,5 +59,13 @@ class TestPassage < ApplicationRecord
 
   def remaining_questions
     test.questions.order(:id).where('id > ?', current_question.id)
+  end
+
+  def total_time
+    created_at + test.timer.minutes
+  end
+
+  def time_over?
+    total_time < Time.now
   end
 end
