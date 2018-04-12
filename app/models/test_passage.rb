@@ -31,6 +31,10 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def timer
+    ((created_at + test.timer.minutes) - Time.now).to_i
+  end
+
   private
 
   def before_save_set_question
