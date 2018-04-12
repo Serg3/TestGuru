@@ -59,3 +59,11 @@ answers = Answer.create([
 #   { status: 'In progress', user_id: users.fetch(1).id, test_id: tests.fetch(3).id },
 #   { status: 'In progress', user_id: users.fetch(2).id, test_id: tests.fetch(0).id },
 # ])
+
+badges = Badge.create([
+  { title: 'complete successfully back-end test', rule: 'category_complete', parameter: 'back-end' },
+  { title: 'complete successfully full-stack test', rule: 'category_complete', parameter: 'full-stack' },
+  { title: 'complete successfully for the first try', rule: 'first_try', parameter: '' },
+  { title: 'complete successfully the 1-st level test', rule: 'level_complete', parameter: '1' },
+  { title: 'complete successfully the 2-nd level test', rule: 'level_complete', parameter: '2' },
+])

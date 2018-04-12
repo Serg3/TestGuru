@@ -31,6 +31,10 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def successfully?
+    completed? && passed?
+  end
+
   private
 
   def before_save_set_question
