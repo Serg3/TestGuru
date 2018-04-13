@@ -31,8 +31,8 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
-  def timer
-    (total_time - Time.now).to_i
+  def time_left
+    (expires_at - Time.current).to_i
   end
 
   private
@@ -61,11 +61,11 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id > ?', current_question.id)
   end
 
-  def total_time
+  def expires_at
     created_at + test.timer.minutes
   end
 
   def time_over?
-    total_time < Time.now
+    expires_at < Time.now
   end
 end
