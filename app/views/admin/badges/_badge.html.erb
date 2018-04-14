@@ -1,0 +1,10 @@
+<tr>
+  <td class='align-middle'><%= badge.title %></td>
+  <td class='align-middle'><%= badge.image %></td>
+  <td class='align-middle'><%= link_to t('common.button.open'), admin_badge_path(badge) %></td>
+  <td class='align-middle'><%= link_to t('common.button.update'), edit_admin_badge_path(badge) %></td>
+  <td class='align-middle'><%= link_to t('common.button.delete'), admin_badge_path(badge),
+                                             method: :delete,
+                                             data: { confirm: t('common.pop_up.delete') } %>
+  </td>
+</tr>

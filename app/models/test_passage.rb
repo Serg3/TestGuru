@@ -41,6 +41,10 @@ class TestPassage < ApplicationRecord
   def time_over?
     expires_at < Time.now
   end
+  
+  def successfully?
+    completed? && passed?
+  end
 
   private
 
