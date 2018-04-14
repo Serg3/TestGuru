@@ -1,5 +1,7 @@
 <p>
-  Time left: <%= content_tag :span, '', class: 'timer', data: { timer: @test_passage.time_left } %>
+  <% if @test_passage.test.timer_exists? %>
+    Time left: <%= content_tag :span, '', class: 'timer', data: { timer: @test_passage.time_left } %>
+  <% end %>
 </p>
 
 <%= content_tag :progress,

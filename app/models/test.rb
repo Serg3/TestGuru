@@ -20,4 +20,8 @@ class Test < ApplicationRecord
   def self.with_category(title)
     by_category(title).pluck(:title)
   end
+
+  def timer_exists?
+    timer && timer > 0
+  end
 end

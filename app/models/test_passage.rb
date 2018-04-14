@@ -4,14 +4,13 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_save :before_save_set_question
-  before_update :before_update_check_timer
 
   def completed?
     current_question.nil?
   end
 
   def accept!(answer_ids)
-    self.correct_questions += 1 if correct_answer?(answer_ids) unless time_over?
+    self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
   end
 
@@ -35,14 +34,18 @@ class TestPassage < ApplicationRecord
     (expires_at - Time.current).to_i
   end
 
+  def finish!
+    self.current_question = nil
+  end
+
+  def time_over?
+    expires_at < Time.now
+  end
+
   private
 
   def before_save_set_question
     self.current_question = self.current_question.nil? ? test.questions.first : next_question
-  end
-
-  def before_update_check_timer
-    self.current_question = nil if time_over?
   end
 
   def correct_answer?(answer_ids)
@@ -63,9 +66,5 @@ class TestPassage < ApplicationRecord
 
   def expires_at
     created_at + test.timer.minutes
-  end
-
-  def time_over?
-    expires_at < Time.now
   end
 end
