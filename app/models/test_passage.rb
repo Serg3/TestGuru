@@ -4,7 +4,6 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_save :before_save_set_question
-  # validates :status, presence: true
 
   def completed?
     current_question.nil?
@@ -31,6 +30,18 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def time_left
+    (expires_at - Time.current).to_i
+  end
+
+  def finish!
+    self.current_question = nil
+  end
+
+  def time_over?
+    expires_at < Time.now
+  end
+  
   def successfully?
     completed? && passed?
   end
@@ -55,5 +66,9 @@ class TestPassage < ApplicationRecord
 
   def remaining_questions
     test.questions.order(:id).where('id > ?', current_question.id)
+  end
+
+  def expires_at
+    created_at + test.timer.minutes
   end
 end
